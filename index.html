@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For Arvijikh, Under the Same Moon</title>
+<style>
+:root{--silver:#d9dce8;--muted:#a8adbf;--night:#080a13;--panel:#111522;--line:#34394b;--glow:#b9c8ff}
+*{box-sizing:border-box}
+body{margin:0;color:#f4f4fa;background:radial-gradient(ellipse at 50% -10%,#33394e 0%,#111522 38%,#070810 78%);font-family:Georgia,'Times New Roman',serif;min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.65;background-image:radial-gradient(1px 1px at 12% 17%,#fff 99%,transparent),radial-gradient(1px 1px at 82% 23%,#fff 99%,transparent),radial-gradient(1px 1px at 61% 71%,#fff 99%,transparent),radial-gradient(2px 2px at 28% 63%,#d9e2ff 99%,transparent),radial-gradient(1px 1px at 91% 84%,#fff 99%,transparent),radial-gradient(1px 1px at 45% 34%,#fff 99%,transparent);z-index:-1}
+main{max-width:850px;margin:auto;padding:32px 18px 70px;text-align:center}
+.eyebrow{font:11px Arial,sans-serif;letter-spacing:.32em;text-transform:uppercase;color:var(--muted)}
+.moon{font-size:58px;margin:20px 0 8px;filter:drop-shadow(0 0 18px #b9c8ff)}
+h1{font-weight:normal;font-size:clamp(36px,8vw,65px);line-height:1.05;margin:14px 0;color:#f0f1fa}
+.subtitle{font-style:italic;color:#bfc5d8;font-size:18px;line-height:1.6}
+button{font:12px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#f4f5ff;background:#1b2030;border:1px solid #656d86;padding:13px 18px;border-radius:30px;cursor:pointer;margin:8px;transition:.2s}
+button:hover{background:#30384f;box-shadow:0 0 18px #8d9acb44}
+section.card{background:linear-gradient(145deg,#171c2bdf,#0d101bdf);border:1px solid var(--line);border-radius:18px;padding:24px;margin:20px auto;text-align:left;box-shadow:0 12px 45px #0004}
+h2{font-weight:normal;color:#e1e5f5;text-align:center;font-size:26px;margin:0 0 18px}
+p{line-height:1.85;color:#d3d6e4}
+.hidden{display:none!important}
+.letter{white-space:pre-line;font-size:17px}
+.stars{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:20px}
+.star{font-size:38px;background:none;border:0;padding:8px;color:#dce3ff;text-shadow:0 0 16px #b9c8ff}
+.message{min-height:50px;text-align:center;color:#dce3ff;font-style:italic}
+.scrap{border-left:1px solid #656d86;padding:5px 0 5px 20px;margin:18px 0}
+.scrap small{letter-spacing:.15em;color:#9ea8c4;text-transform:uppercase;font:10px Arial,sans-serif}
+input{display:block;width:min(100%,300px);margin:12px auto;padding:12px;border-radius:8px;border:1px solid #545c76;background:#080b14;color:white;text-align:center}
+footer{font:11px Arial,sans-serif;color:#8d93a8;letter-spacing:.15em;margin-top:40px}
+#quizResult{color:#e1e5f5;text-align:center;min-height:26px}
+.candles{font-size:36px;letter-spacing:12px;text-align:center;margin:15px}
+.center{text-align:center}
+a{color:#cbd6ff}
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">a little birthday universe · made just for you</div>
+  <div class="moon">☾</div>
+  <h1>For Arvijikh,<br><em>under the same moon</em></h1>
+  <p class="subtitle">somewhere between the stars, there’s a person I’m really glad exists.</p>
+  <button id="openBtn" onclick="revealIntro()">come a little closer</button>
+  <div id="intro" class="hidden">
+    <p class="subtitle">hi, huurhnuu. this little corner of the universe is yours tonight. ♡</p>
+    <button onclick="show('letter')">open your letter</button>
+    <button onclick="show('wishes')">make a wish</button>
+    <button onclick="show('scrapbook')">our little scrapbook</button>
+    <button onclick="show('quiz')">a tiny game</button>
+    <button onclick="show('secret')">something secret</button>
+    <button onclick="show('candles')">blow out your candles</button>
+    <button onclick="toggleMusic()" id="musicBtn">play a little melody ♪</button>
+  </div>
+
+  <section id="letter" class="card hidden">
+    <h2>for your birthday, my favorite almost</h2>
+    <p class="letter">happy birthday, huurhnuu. 🖤
+
+i wish i could be there to see your face when you read this, to make a little fuss over you, and to remind you in person how special you are to me.
+
+even with all this distance between us, you’ve found a way to become part of my days. i catch myself wanting to tell you things, wondering how you’re doing, and smiling at the smallest reminders of you. it’s a strange, lovely thing to feel close to someone who’s so far away.
+
+i don’t know what name we’ll give what we are, or what the future has planned for us. but i know that meeting you has made my world a little softer and brighter, and i’m grateful for that.
+
+so here’s to another year of you: your laugh, your thoughts, your dreams, and all the little things that make you *you*. i hope life is gentle with you this year. i hope you get reasons to be proud of yourself, moments that make you laugh until it hurts, and people who remind you how loved you are.
+
+and if you ever look up at the moon, remember that somewhere beneath this same sky, there’s someone thinking of you a little more than she probably admits.
+
+happy birthday, my huurhnuu. 🌙
+— someone who’s intensely, unmistakably fond of you</p>
+    <div class="center"><button onclick="show('intro')">fold the letter</button></div>
+  </section>
+
+  <section id="wishes" class="card hidden">
+    <h2>three wishes beneath the moon</h2>
+    <p class="center">tap each star to find a wish meant for you.</p>
+    <div class="stars"><button class="star" onclick="wish(0)">✦</button><button class="star" onclick="wish(1)">✧</button><button class="star" onclick="wish(2)">✦</button></div>
+    <p id="wishText" class="message">your wishes are waiting in the stars.</p>
+    <div class="center"><button onclick="show('intro')">back to the universe</button></div>
+  </section>
+
+  <section id="scrapbook" class="card hidden">
+    <h2>little things, kept close</h2>
+    <div id="chapter" class="scrap"><small>chapter 01 · the beginning</small><p>it started with a conversation, and somehow you became someone i look forward to hearing from. funny how a person can slip into your routine and make an ordinary day feel different.</p></div>
+    <div class="center"><button onclick="changeChapter(-1)">previous</button><button onclick="changeChapter(1)">next little page</button></div>
+    <div class="center"><button onclick="show('intro')">close scrapbook</button></div>
+  </section>
+
+  <section id="quiz" class="card hidden">
+    <h2>birthday question ✧</h2>
+    <p class="center">what do you think i’m wishing for you most this year?</p>
+    <div class="center">
+      <button onclick="quiz(0)">more happiness</button>
+      <button onclick="quiz(1)">all your dreams coming true</button>
+      <button onclick="quiz(2)">for us to meet soon</button>
+    </div>
+    <p id="quizResult"></p>
+    <div class="center"><button onclick="show('intro')">back</button></div>
+  </section>
+
+  <section id="secret" class="card hidden">
+    <h2>a little secret, if you know the key</h2>
+    <p class="center">hint: the hour when the world feels quiet and the moon is awake.</p>
+    <input id="password" type="password" placeholder="enter the secret word" autocomplete="off">
+    <div class="center"><button onclick="unlock()">unlock message</button></div>
+    <p id="secretText" class="message"></p>
+    <div class="center"><button onclick="show('intro')">back</button></div>
+  </section>
+
+  <section id="candles" class="card hidden">
+    <h2>make a birthday wish</h2>
+    <p class="center">tap the candles to blow them out, one by one.</p>
+    <div class="candles" id="candleRow"><span onclick="blow(this)">🕯️</span><span onclick="blow(this)">🕯️</span><span onclick="blow(this)">🕯️</span></div>
+    <p id="candleText" class="message">three little lights, three little wishes.</p>
+    <div class="center"><button onclick="resetCandles()">light them again</button><button onclick="show('intro')">back</button></div>
+  </section>
+  <footer>made with a little moonlight, for arvijikh · ☾</footer>
+</main>
+<script>
+function revealIntro(){document.getElementById('intro').classList.remove('hidden');document.getElementById('openBtn').classList.add('hidden');}
+function show(id){document.querySelectorAll('section.card').forEach(s=>s.classList.add('hidden'));if(id!=='intro')document.getElementById(id).classList.remove('hidden');document.getElementById('intro').classList.remove('hidden');}
+const wishes=["i hope this year brings you peace that stays, and happiness that finds you in ordinary moments.","i hope you never forget how much you have to offer the world, even on days when you doubt yourself.","and a selfish little wish from me: that we get more time, more memories, and someday a real hug instead of a screen. 🖤"];
+function wish(i){document.getElementById('wishText').textContent=wishes[i];}
+const chapters=[
+["chapter 01 · the beginning","it started with a conversation, and somehow you became someone i look forward to hearing from. funny how a person can slip into your routine and make an ordinary day feel different."],
+["chapter 02 · the distance","miles are such a strange thing. they make a hug impossible for now, but they don’t stop a message from making my whole day better. until the distance gets smaller, i’ll treasure the little ways we show up for each other."],
+["chapter 03 · what i hope","i hope there are future birthdays where i can say this beside you, not through a screen. until then, let this little page remind you that you matter to someone over here, under your very same moon."]
+];let chapterIndex=0;
+function changeChapter(d){chapterIndex=(chapterIndex+d+chapters.length)%chapters.length;document.getElementById('chapter').innerHTML='<small>'+chapters[chapterIndex][0]+'</small><p>'+chapters[chapterIndex][1]+'</p>';}
+function quiz(i){document.getElementById('quizResult').textContent=["yes, always. you deserve the softest, happiest kind of year. 🖤","that too. i hope life surprises you in all the best ways. 🌙","caught me. that one might be a tiny bit for me, too. ♡"][i];}
+function unlock(){let p=document.getElementById('password').value.trim().toLowerCase();document.getElementById('secretText').textContent=p==='midnight'?"my little secret: you’ve become more important to me than i planned for. i’m not asking this birthday to define anything between us — i just want you to know that what i feel is real, and i’m really glad it’s you. 🖤":"not quite, huurhnuu. think of the quietest hour of the night. 🌙";}
+function blow(el){if(el.textContent==='🕯️'){el.textContent='⋆';let n=document.querySelectorAll('#candleRow span').length;let left=[...document.querySelectorAll('#candleRow span')].filter(s=>s.textContent==='🕯️').length;if(!left)document.getElementById('candleText').textContent='wish made. may this year be kind to you, huurhnuu. ♡';}}
+function resetCandles(){document.querySelectorAll('#candleRow span').forEach(s=>s.textContent='🕯️');document.getElementById('candleText').textContent='three little lights, three little wishes.';}
+let audioCtx=null,oscillators=[],musicOn=false;
+function toggleMusic(){if(musicOn){oscillators.forEach(o=>{try{o.stop()}catch(e){}});oscillators=[];musicOn=false;document.getElementById('musicBtn').textContent='play a little melody ♪';return;}
+const AC=window.AudioContext||window.webkitAudioContext;if(!AC){alert('Your browser does not support this little melody.');return;}audioCtx=new AC();musicOn=true;document.getElementById('musicBtn').textContent='stop the melody ♪';
+const notes=[261.63,329.63,392,329.63,293.66,349.23,440,392];notes.forEach((freq,i)=>{let o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type='sine';o.frequency.value=freq;g.gain.setValueAtTime(.0001,audioCtx.currentTime+i*.42);g.gain.exponentialRampToValueAtTime(.055,audioCtx.currentTime+i*.42+.03);g.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+i*.42+.38);o.connect(g);g.connect(audioCtx.destination);o.start(audioCtx.currentTime+i*.42);o.stop(audioCtx.currentTime+i*.42+.4);oscillators.push(o);});setTimeout(()=>{musicOn=false;document.getElementById('musicBtn').textContent='play a little melody ♪';},3700);}
+</script>
+</body>
+</html>
