@@ -53,7 +53,7 @@ a{color:#cbd6ff}
   </div>
 
   <section id="letter" class="card hidden">
-    <h2>for your birthday, my fav almost...</h2>
+   <h2>for your birthday, BABYYY</h2>
     <p class="letter">tursun udriin mendee huurhnuuuuuuuuu. 🖤
 
  Энийг уншиж байхад нь хажууд нь ямар царай гаргахыг нь хараад байж байх юмсан даа, жоохон ичээж reaction гаргуулахын тулд кк, аан бас надад ямар эрхэм нандин хүн бэ гэдгийг мэдрүүлэх гэсэн юм аа.
@@ -63,26 +63,19 @@ a{color:#cbd6ff}
 Чамтайгаа үнэхээр азтай таарсан гэж боддог. Чи минь ухаантай, мундаг,бусдаас тэс ондоо бас ХӨӨРХӨН ЭРХ. Миний сонсож байсан хамгийн гоё хоолойтой хамгийн царайлаг залуу. Зүгээр л утсаар ярьж байж, догдлол сандрал мэтийн олон мэдрэмжүүдийг зэрэг зэрэг төрүүлдэг биширмээр хүн шүү. 
 за тэгээд 22 нас нь аз жаргал, амжилт бүтээлээр дүүрэн байг, амьдрал чамд минь зөөлөн хандаасай. i hope you get reasons to be proud of yourself, moments that make you laugh until it hurts, and people who remind you how loved you are.
 
-and if you ever look up at the moon, remember that somewhere beneath this same sky, there’s someone thinking of you a little more than she probably admits. heheheheh
+Хэлдэггүй л болохоос чамайг дандааааа санаж,хүсэж байдаг шүүүү heheheheh
 
 үс нь бууралтаж хөгширсөн ч наддаа эрхэлсээр л байгаарай. 🌙
 — someone who’s intensely, unmistakably fond of you</p>
-    <div class="center"><button onclick="show('intro')">fold the letter</button></div>
+    <div class="center"><button onclick="show('intro')">окок</button></div>
   </section>
 
   <section id="wishes" class="card hidden">
-    <h2>three wishes beneath the moon</h2>
-    <p class="center">tap each star to find a wish meant for you.</p>
+    <h2>энэ дээр би lockin хийсэн шоолох хэрэггүй</h2>
+    <p class="center">од дээр дарангуут миний чамд хүссэн хүслүүд гарж ирнэ.</p>
     <div class="stars"><button class="star" onclick="wish(0)">✦</button><button class="star" onclick="wish(1)">✧</button><button class="star" onclick="wish(2)">✦</button></div>
-    <p id="wishText" class="message">your wishes are waiting in the stars.</p>
+    <p id="wishText" class="message">заюу.</p>
     <div class="center"><button onclick="show('intro')">back to the universe</button></div>
-  </section>
-
-  <section id="scrapbook" class="card hidden">
-    <h2>little things, kept close</h2>
-    <div id="chapter" class="scrap"><small>chapter 01 · the beginning</small><p>it started with a conversation, and somehow you became someone i look forward to hearing from. funny how a person can slip into your routine and make an ordinary day feel different.</p></div>
-    <div class="center"><button onclick="changeChapter(-1)">previous</button><button onclick="changeChapter(1)">next little page</button></div>
-    <div class="center"><button onclick="show('intro')">close scrapbook</button></div>
   </section>
 
   <section id="quiz" class="card hidden">
@@ -97,37 +90,32 @@ and if you ever look up at the moon, remember that somewhere beneath this same s
     <div class="center"><button onclick="show('intro')">back</button></div>
   </section>
 
-  <section id="secret" class="card hidden">
-    <h2>a little secret, if you know the key</h2>
-    <p class="center">hint: the hour when the world feels quiet and the moon is awake.</p>
+  <section id="нууц" class="card hidden">
+    <h2>түлхүүрийг нь олвол нэг айхтар нууц байна</h2>
+    <p class="center">hint: миний дуртай өнгө.</p>
     <input id="password" type="password" placeholder="enter the secret word" autocomplete="off">
     <div class="center"><button onclick="unlock()">unlock message</button></div>
     <p id="secretText" class="message"></p>
     <div class="center"><button onclick="show('intro')">back</button></div>
   </section>
 
-  <section id="candles" class="card hidden">
+   <section id="candles" class="card hidden">
     <h2>make a birthday wish</h2>
-    <p class="center">tap the candles to blow them out, one by one.</p>
+    <p class="center">нэг нэгээр нь дарахаар үлээгдэнэ.</p>
     <div class="candles" id="candleRow"><span onclick="blow(this)">🕯️</span><span onclick="blow(this)">🕯️</span><span onclick="blow(this)">🕯️</span></div>
-    <p id="candleText" class="message">three little lights, three little wishes.</p>
-    <div class="center"><button onclick="resetCandles()">light them again</button><button onclick="show('intro')">back</button></div>
+    <p id="candleText" class="message">3 хүсэл бодоорой</p>
+    <div class="center"><button onclick="resetCandles()">нахиулъя</button><button onclick="show('intro')">ханалаа</button></div>
   </section>
-  <footer>made with a little moonlight, for arvijikh · ☾</footer>
+  <footer>Арвижих baby дээ зориулав· ☾</footer>
 </main>
 <script>
 function revealIntro(){document.getElementById('intro').classList.remove('hidden');document.getElementById('openBtn').classList.add('hidden');}
 function show(id){document.querySelectorAll('section.card').forEach(s=>s.classList.add('hidden'));if(id!=='intro')document.getElementById(id).classList.remove('hidden');document.getElementById('intro').classList.remove('hidden');}
 const wishes=["i hope this year brings you peace that stays, and happiness that finds you in ordinary moments.","i hope you never forget how much you have to offer the world, even on days when you doubt yourself.","and a selfish little wish from me: that we get more time, more memories, and someday a real hug instead of a screen. 🖤"];
 function wish(i){document.getElementById('wishText').textContent=wishes[i];}
-const chapters=[
-["chapter 01 · the beginning","it started with a conversation, and somehow you became someone i look forward to hearing from. funny how a person can slip into your routine and make an ordinary day feel different."],
-["chapter 02 · the distance","miles are such a strange thing. they make a hug impossible for now, but they don’t stop a message from making my whole day better. until the distance gets smaller, i’ll treasure the little ways we show up for each other."],
-["chapter 03 · what i hope","i hope there are future birthdays where i can say this beside you, not through a screen. until then, let this little page remind you that you matter to someone over here, under your very same moon."]
-];let chapterIndex=0;
-function changeChapter(d){chapterIndex=(chapterIndex+d+chapters.length)%chapters.length;document.getElementById('chapter').innerHTML='<small>'+chapters[chapterIndex][0]+'</small><p>'+chapters[chapterIndex][1]+'</p>';}
-function quiz(i){document.getElementById('quizResult').textContent=["yes, always. you deserve the softest, happiest kind of year. 🖤","that too. i hope life surprises you in all the best ways. 🌙","caught me. that one might be a tiny bit for me, too. ♡"][i];}
-function unlock(){let p=document.getElementById('password').value.trim().toLowerCase();document.getElementById('secretText').textContent=p==='midnight'?"my little secret: you’ve become more important to me than i planned for. i’m not asking this birthday to define anything between us — i just want you to know that what i feel is real, and i’m really glad it’s you. 🖤":"not quite, huurhnuu. think of the quietest hour of the night. 🌙";}
+function quiz(i){document.getElementById('quizResult').textContent=["тэгэлгүй яахав, мэдээж чамд минь хамгийн ээлтэй жил байгээ🖤","бас тиймээ тийн. i hope life surprises you in all the best ways. 🌙","баригдсандаа ххаха that one might be a tiny bit for me, too. ♡"][i];}
+function unlock(){let p=document.getElementById('password').value.trim().toLowerCase();document.getElementById('secretText').textContent=p==='white'?"нууц шүү яриад яваад байв: Би энэ харилцааг үнэхээр serious хүлээж авж байгаа шүү. Анх нэг их итгэл байгаагүй ч одоо бол бодолд багтаад хоёулаа чадчих юм шиг санагддаг. Болж өгвөл хуримаа хийгээд тусдаа гаръя тэгэх үү? Миний 1т байдаг залуужүүдээ. Энэ хэвээрээ байг. 3 сард жинхэнэ бэлэгтэй нь очно за.🖤":"хүүшш мэдэхгүй байгаа юм биш биздээ";}
+
 function blow(el){if(el.textContent==='🕯️'){el.textContent='⋆';let n=document.querySelectorAll('#candleRow span').length;let left=[...document.querySelectorAll('#candleRow span')].filter(s=>s.textContent==='🕯️').length;if(!left)document.getElementById('candleText').textContent='wish made. may this year be kind to you, huurhnuu. ♡';}}
 function resetCandles(){document.querySelectorAll('#candleRow span').forEach(s=>s.textContent='🕯️');document.getElementById('candleText').textContent='three little lights, three little wishes.';}
 let audioCtx=null,oscillators=[],musicOn=false;
