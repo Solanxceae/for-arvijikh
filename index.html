@@ -119,9 +119,18 @@ function unlock(){let p=document.getElementById('password').value.trim().toLower
 function blow(el){if(el.textContent==='🕯️'){el.textContent='⋆';let n=document.querySelectorAll('#candleRow span').length;let left=[...document.querySelectorAll('#candleRow span')].filter(s=>s.textContent==='🕯️').length;if(!left)document.getElementById('candleText').textContent='wish made. may this year be kind to you, huurhnuu. ♡';}}
 function resetCandles(){document.querySelectorAll('#candleRow span').forEach(s=>s.textContent='🕯️');document.getElementById('candleText').textContent='three little lights, three little wishes.';}
 let audioCtx=null,oscillators=[],musicOn=false;
-function toggleMusic(){if(musicOn){oscillators.forEach(o=>{try{o.stop()}catch(e){}});oscillators=[];musicOn=false;document.getElementById('musicBtn').textContent='play a little melody ♪';return;}
-const AC=window.AudioContext||window.webkitAudioContext;if(!AC){alert('Your browser does not support this little melody.');return;}audioCtx=new AC();musicOn=true;document.getElementById('musicBtn').textContent='stop the melody ♪';
-const notes=[261.63,329.63,392,329.63,293.66,349.23,440,392];notes.forEach((freq,i)=>{let o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type='sine';o.frequency.value=freq;g.gain.setValueAtTime(.0001,audioCtx.currentTime+i*.42);g.gain.exponentialRampToValueAtTime(.055,audioCtx.currentTime+i*.42+.03);g.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+i*.42+.38);o.connect(g);g.connect(audioCtx.destination);o.start(audioCtx.currentTime+i*.42);o.stop(audioCtx.currentTime+i*.42+.4);oscillators.push(o);});setTimeout(()=>{musicOn=false;document.getElementById('musicBtn').textContent='play a little melody ♪';},3700);}
+<div class="music-player">
+  <p>NOW PLAYING // JUST FOR YOU</p>
+
+  <iframe
+    width="100%"
+    height="100"
+    src="https://www.youtube-nocookie.com/embed/Ml5JTNp2PgA"
+    title="Our song"
+    allow="encrypted-media; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
 </script>
 </body>
 </html>
