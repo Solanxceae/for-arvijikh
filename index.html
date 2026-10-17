@@ -118,7 +118,6 @@ function unlock(){let p=document.getElementById('password').value.trim().toLower
 function blow(el){if(el.textContent==='🕯️'){el.textContent='⋆';let n=document.querySelectorAll('#candleRow span').length;let left=[...document.querySelectorAll('#candleRow span')].filter(s=>s.textContent==='🕯️').length;if(!left)document.getElementById('candleText').textContent='wish made. may this year be kind to you, huurhnuu. ♡';}}
 function resetCandles(){document.querySelectorAll('#candleRow span').forEach(s=>s.textContent='🕯️');document.getElementById('candleText').textContent='three little lights, three little wishes.';}
 
-</div>
 </script>
 </body>
 </html>
